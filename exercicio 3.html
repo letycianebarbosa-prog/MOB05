@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Site de Culinária</title>
+
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #b4040c;
+            font-size: 40px;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .texto {
+            margin: 1px;
+            padding: 10px;
+        }
+        .card{
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #b4040c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #e72a2a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Receitas Deliciosas</h1>
+    </header>
+
+    <main>
+        <p class="texto">Aprenda a fazer pratos rápidos, fáceis e muito saborosos para o seu dia a dia.</p>
+        
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500" alt="Prato de comida saudável" width="300">
+        
+        <h2 class="texto">Meus Pratos Favoritos</h2>
+        <ul>
+            <li>Panqueca de frango</li>
+            <li>Bolo de Chocolate</li>
+            <li>Salada Caesar</li>
+        </ul>
+
+    </div>
+        <form onsubmit="mostrarMensagem(event)">
+            <input type="text" placeholder="Digite seu nome" required>
+            <br><br>
+            <input type="email" placeholder="Digite seu e-mail" required>
+            <br><br>
+            <input type="number" placeholder="Digite sua idade" required>
+            <br><br>
+            <!-- Botão de envio -->
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Mensagem de sucesso que vai aparecer quando clicar em Enviar -->
+        <p id="mensagem-sucesso" style="color: green; font-weight: bold; margin-top: 15px;"></p>
+    </main>
+
+    <footer>
+        <p>Site criado por Leticia Faria, Nadson Da Silva e Rafaela Mendonça - 2026</p>
+    </footer>
+
+    <!-- O Script JavaScript que faz a mensagem aparecer -->
+    <script>
+        function mostrarMensagem(evento) {
+            // Evita que a página recarregue
+            evento.preventDefault(); 
+            
+            // Coloca a mensagem de sucesso no parágrafo vazio
+            document.getElementById("mensagem-sucesso").innerText = "Enviado com sucesso! Você receberá as notificações desse site!";
+        }
+    </script>

@@ -1,0 +1,62 @@
+<h3>💱 Conversor Universal de Moedas</h3>
+
+
+<input id="valor" type="number" placeholder="Digite o valor">
+
+
+<label>De:</label>
+<select id="moedaOrigem">
+    <option value="BRL">Real (R$)</option>
+    <option value="USD">Dólar (US$)</option>
+    <option value="EUR">Euro (€)</option>
+    <option value="ARS">Peso Argentino ($)</option>
+</select>
+
+
+<label>Para:</label>
+<select id="moedaDestino">
+    <option value="USD">Dólar (US$)</option>
+    <option value="BRL">Real (R$)</option>
+    <option value="EUR">Euro (€)</option>
+    <option value="ARS">Peso Argentino ($)</option>
+</select>
+
+
+<button onclick="converterMoeda()">Converter</button>
+
+
+<p id="resultado"></p>
+
+<script>
+    function converterMoeda() {
+       
+        let valorStr = document.getElementById("valor").value;
+        let origem = document.getElementById("moedaOrigem").value;
+        let destino = document.getElementById("moedaDestino").value;
+
+        
+        if (valorStr === "") {
+            document.getElementById("resultado").textContent = 
+                "⚠️ Por favor, digite um valor para converter!";
+            return;
+        }
+
+        let valor = parseFloat(valorStr);
+
+        
+        let cotacoes = {
+            BRL: 1.0,
+            USD: 5.00,
+            EUR: 5.50,
+            ARS: 0.005
+        };
+
+        let valorEmBrl = valor * cotacoes[origem];
+
+    
+        let valorFinal = valorEmBrl / cotacoes[destino];
+
+        document.getElementById("resultado").textContent = 
+            `✅ ${valor.toFixed(2)} [${origem}] equivalem a ${valorFinal.toFixed(2)} [${destino}]`;
+    }
+</script>

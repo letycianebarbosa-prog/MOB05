@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Site de Culinária</title>
+</head>
+<body>
+
+    <header>
+        <h1 id=>Receitas Deliciosas</h1>
+    </header>
+
+    <main>
+        <p class=>Aprenda a fazer pratos rápidos, fáceis e muito saborosos para o seu dia a dia.</p>
+        
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500" alt="Prato de comida saudável" width="300">
+        
+        <h2>Meus Pratos Favoritos</h2>
+        <ul>
+            <li>Panqueca de frango</li>
+            <li>Bolo de Chocolate</li>
+            <li>Salada Caesar</li>
+        </ul>
+        <form onsubmit="mostrarMensagem(event)">
+            <input type="text" placeholder="Digite seu nome" required>
+            <br><br>
+            <input type="email" placeholder="Digite seu e-mail" required>
+            <br><br>
+            <input type="number" placeholder="Digite sua idade" required>
+            <br><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+        
+        <p id="mensagem-sucesso" style="color: green; font-weight: bold; margin-top: 15px;"></p>
+    </main>
+
+    <footer>
+        <p>Site criado por Leticia Faria, Nadson Da Silva e Rafaela Mendonça - 2026</p>
+    </footer>
+
+    
+    <script>
+        function mostrarMensagem(evento) {
+            // Evita que a página recarregue
+            evento.preventDefault(); 
+            
+            // Coloca a mensagem de sucesso no parágrafo vazio
+            document.getElementById("mensagem-sucesso").innerText = "Enviado com sucesso! Você receberá as notificações desse site!";
+        }
+    </script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: left; /* Corrigido de 'lateral' para 'left' */
+            padding: 20px;
+            background: #cbe3fa;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Meu título -->
+    <h1>Meu Projeto de Tecnologia</h1>
+
+    <!-- Texto inicial -->
+    <p>Este projeto é uma página criada para aprender os principais componentes do HTML e como eles podem ser usados em um site.</p>
+
+    <!-- Imagem -->
+    <img src="images/imagem.jpg" alt="images" width="300">
+    
+    <h2>Formulário</h2>
+
+    <!-- Formulário corrigido -->
+    <form>
+        <label>Digite o que mais gosta na área de Tecnologia:</label>
+        <input type="text" placeholder="Digite aqui">
+        <br>
+        <!-- Botão de envio -->
+        <button type="button" onclick="enviar()">Enviar</button>
+    </form>
+
+    <script>
+        function enviar() {
+            alert("Formulário enviado com sucesso!");
+        }
+    </script>
+</body>
+
+</html>
